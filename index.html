@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Location Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Location</p>
+          <h1>Live Location Tracker</h1>
+        </div>
+        <button id="locateBtn">Get My Location</button>
+      </header>
+
+      <main class="content">
+        <section class="info-panel">
+          <div class="info-card">
+            <span>Latitude</span>
+            <strong id="lat">--</strong>
+          </div>
+
+          <div class="info-card">
+            <span>Longitude</span>
+            <strong id="lng">--</strong>
+          </div>
+
+          <div class="info-card">
+            <span>Accuracy</span>
+            <strong id="accuracy">--</strong>
+          </div>
+
+          <div class="info-card">
+            <span>Address</span>
+            <strong id="address">Waiting for location...</strong>
+          </div>
+        </section>
+
+        <section class="map-panel">
+          <div id="map"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
